@@ -12,8 +12,9 @@
 
 <body>
     <header style="background-color: bisque;">
-
-        <img src="./media/earth.jpg" style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
+        
+        <img src="./media/earth.jpg"
+        style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
         <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 7vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
@@ -21,43 +22,63 @@
                 <td><a href="./about_us.html">About Us</a></td>
                 <td><a href="./S1.html">Page 1</a></td>
                 <td><a href="./S2.html">Page 2</a></td>
-
+                
                 <p class="right" style="padding-left: 3vw; font-size: 1.7vw;">
                     by Enzo and Martin
                     <br>
                     8-Corby 2024-2025
                 </p>
             </tr>
-
+            
         </table>
         <br>
         <hr style="border: 1px solid black">
-
-
+        
+        
     </header>
     <div style="background-image: url(./media/computerHeading.jpg);background-size: cover;">
         <hr>
         <h2 style="text-align: center; font-size: 4vw; color: white;">HTML</h2>
-        <h1 style="text-align: center;font-size: 8vw; color: white; background-color: black;">How to add links and multimedia</h1>
-        <hr>
-    </div>
-    <div style="margin-left: 5vw;">
-        <h1 style=" font-size: 5vw;">Links</h1>
-        <p>
-            The &lta&gt tag create a link. For example, <br>
-            <br>
-             &nbsp;&nbsp;&nbsp;&lta href = "https://www.example.com"&gt Click me! &lt/a&gt <br>
-             <br>
-             will create a link like this: <br>
-             <br>
-             <a href="https://www.example.com">Click me!</a> <br>
-             <br>
-             
-            
-        </p>
-        
-    </div>
-    
-</body>
+        <h1 style="text-align: center;font-size: 8vw; color: white; background-color: black;">How to add links and
+            multimedia</h1>
+            <hr>
+        </div>
+        <div style="margin-left: 5vw; margin-right: 10vw;">
+            <h1 style=" font-size: 5vw;">Links</h1>
+            <p>
+                The &lta&gt tag create a link. For example,
+            </p>
+            <pre>
+                
+                &lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt <br>
+            </pre>
+            <p>
+                will create a link like this: <br>
+                <br>                
+                <a href="https://www.example.com" target="_blank">Click me!</a> <br>
+                <br>
+                This link will open in a new tab. <br>
+                If would like it to open in the same tab, you could change the "target" attribute to "_self":
+            </p>
+            <pre>
+                
+                &lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt <br>
+            </pre>
+            <p>
+                The output would then be: 
+                <br>                
+                <a href="https://www.example.com" target="_self">Click me!</a> <br>
+                <br>
 
-</html>
+                As you can see, clicking the link will bring you to the website defined in the "href" attribute. You can change this to any site you want. In fact, it doesn't even have to point to a website
+
+            </p>
+            
+            
+            
+            
+        </div>
+        
+    </body>
+    
+    </html>
