@@ -13,8 +13,6 @@
 <body style="margin: 0%;">
     <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;">
 
-        <!-- <img src="./assets/earth.jpg"
-            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;"> -->
         <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
@@ -67,11 +65,7 @@
                         <ol type="a">
                             <li> <a href="#images">Images</a></li>
                             <li> <a href="#audio">Audio</a></li>
-                            <li> <a href="#video">Video</a>
-                                <ol type="i">
-                                    <li> <a href="#yt">Youtube</a></li>
-                                </ol>
-                            </li>
+                            <li> <a href="#video">Video</a></li>
                             <li> <a href="#AT">Animated Text</a></li>
                         </ol>
                     </a>
@@ -289,21 +283,17 @@
             <video controls width="500vw">
                 <source src="assets/oceanVideo.mp4">
             </video>
-            <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", and "height"
+            <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", "loop", and "height"
                 attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
                 attribute. Autoplay with sound is not allowed in most browsers.</p>
             <pre class="code">
-&ltvideo controls muted autoplay width="500vw"&gt
+&ltvideo controls muted autoplay loop width="500vw"&gt
     &ltsource src = "assets/oceanVideo.mp4"&gt
 &lt/video&gt
                                 </pre>
-            <video controls muted autoplay width="500vw">
+            <video controls muted autoplay loop width="500vw">
                 <source src="assets/oceanVideo.mp4">
             </video>
-            <div>
-                <h3 style="font-size: 3vw;" id="yt">Adding Youtube Videos</h3>
-
-            </div>
         </div>
         <div>
             <h2 style=" font-size: 4vw;" id="AT">Animated Text</h2>

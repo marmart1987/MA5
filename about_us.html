@@ -10,20 +10,21 @@
     </style>
 </head>
 
-<body>
+<body style="margin: 0%;">
 
-    <header style="background-color: bisque;">
+    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;">
 
-        <img src="./assets/earth.jpg" style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
-        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 7vw;">OUR SITE</h1>
+        <!-- <img src="./assets/earth.jpg"
+            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;"> -->
+        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
-                <td><a href="./index.html">Homepage</a></td>
-                <td><a href="./about_us.html">About Us</a></td>
-                <td><a href="./S1.html">Page 1</a></td>
-                <td><a href="./S2.html">Page 2</a></td>
+                <td><a href="./index.html" style="color:crimson;"><b>Homepage</b></a></td>
+                <td><a href="./about_us.html" style="color:crimson;"><b>About Us </b></a></td>
+                <td><a href="./S1.html" style="color:crimson;"><b>AP</b></a></td>
+                <td><a href="./S2.html" style="color:crimson;"><b>Computer </b></a></td>
 
-                <p class="right" style="padding-left: 3vw; font-size: 1.7vw;">
+                <p class="right" id="headOwn">
                     by Enzo and Martin
                     <br>
                     8-Corby 2024-2025
@@ -32,15 +33,22 @@
 
         </table>
         <br>
-        <hr style="border: 1px solid black">
+        <hr style="border: 1px solid black;margin-bottom: 0;">
+
 
     </header>
-
-    <div style="background-image: url(./assets/aboutUsHeading.jpg);background-size: cover;">
+    <div id="pageHead" style="background-image: url(./assets/aboutUsHeading.jpg);background-size: cover;">
         <hr>
-        <h1 style="text-align: center;font-size: 8vw; ">About Us</h1>
+        <h1
+            style="text-align: center;font-size: 4vw; color: white; background-color: black;margin:30vw;margin-top: 10vw;margin-bottom: 10vw;">
+            About Us</h1>
+        <hr>
         <hr>
     </div>
+    <script>
+        console.log("Size of header:" + document.querySelector("header").offsetHeight)
+        document.getElementById("pageHead").style.marginTop = document.querySelector("header").offsetHeight - 1 + "px";
+    </script>
 
     <h2 style="margin-left: 15%; margin-right: 20%;">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our
