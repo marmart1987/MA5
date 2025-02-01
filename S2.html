@@ -12,9 +12,9 @@
 
 <body>
     <header style="background-color: bisque;">
-        
+
         <img src="./media/earth.jpg"
-        style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
+            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
         <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 7vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
@@ -22,63 +22,148 @@
                 <td><a href="./about_us.html">About Us</a></td>
                 <td><a href="./S1.html">Page 1</a></td>
                 <td><a href="./S2.html">Page 2</a></td>
-                
+
                 <p class="right" style="padding-left: 3vw; font-size: 1.7vw;">
                     by Enzo and Martin
                     <br>
                     8-Corby 2024-2025
                 </p>
             </tr>
-            
+
         </table>
         <br>
         <hr style="border: 1px solid black">
-        
-        
+
+
     </header>
     <div style="background-image: url(./media/computerHeading.jpg);background-size: cover;">
         <hr>
         <h2 style="text-align: center; font-size: 4vw; color: white;">HTML</h2>
-        <h1 style="text-align: center;font-size: 8vw; color: white; background-color: black;">How to add links and
-            multimedia</h1>
-            <hr>
+        <h1 style="text-align: center;font-size: 8vw; color: white; background-color: black;">How to Add Links and
+            Multimedia</h1>
+        <hr>
+    </div>
+    <div style="float: right; margin-right: 5vw; margin-top: 10vw;">
+        <div>
+            <h1>
+                Table of Contents
+            </h1>
+            <ol type="i">
+                <li><a href="#links">Links</a></li>
+                <li><a href="#multimedia">Multimedia
+
+                        <ol type="a">
+                            <li> <a href="#images">Images</a></li>
+                            <li> <a href="#audio">Audio</a></li>
+                            <li> <a href="#video">Video</a>
+                                <ol type="i">
+                                    <li> <a href="#yt">Youtube</a></li>
+                                </ol>
+                            </li>
+                            <li> <a href="#AT">Animated Text</a></li>
+                        </ol>
+                    </a>
+                </li>
+
+            </ol>
         </div>
-        <div style="margin-left: 5vw; margin-right: 10vw;">
-            <h1 style=" font-size: 5vw;">Links</h1>
+        <div>
+            <p>Written by Martin Thomas of 8-Corby</p>
+            <p>Feb 1, 2025</p>
+        </div>
+    </div>
+    <div style="margin-left: 5vw; margin-right: 20vw;">
+        <h1 style=" font-size: 8vw;" id="links">Links</h1>
+        <div>
             <p>
                 The &lta&gt tag create a link. For example,
             </p>
-            <pre>
-                
-                &lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt <br>
-            </pre>
+            <br>
+            <pre>&lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt</pre>
+            <br>
             <p>
                 will create a link like this: <br>
-                <br>                
+                <br>
                 <a href="https://www.example.com" target="_blank">Click me!</a> <br>
                 <br>
                 This link will open in a new tab. <br>
                 If would like it to open in the same tab, you could change the "target" attribute to "_self":
             </p>
-            <pre>
-                
-                &lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt <br>
-            </pre>
+            <br>
+            <pre>&lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt</pre>
+            <br>
             <p>
-                The output would then be: 
-                <br>                
+                The output would then be:
+                <br><br>
                 <a href="https://www.example.com" target="_self">Click me!</a> <br>
                 <br>
 
-                As you can see, clicking the link will bring you to the website defined in the "href" attribute. You can change this to any site you want. In fact, it doesn't even have to point to a website
-
+                There are two* other values for the target attribute: _parent, _top. These are used when you have links
+                inside iframes. _parent will open the link in the context that the frame was embedded in. _top will open
+                the
+                link in the topmost browsing context in the case of nested iframes.
             </p>
-            
-            
-            
-            
+            <img style="width:60vw; " src="./media/links.png"
+                alt="An image differenciating the different possible values for the target attribute of links">
+            <p>
+                <a
+                    href="https://stackoverflow.com/questions/18470097/difference-between-self-top-and-parent-in-the-anchor-tag-target-attribute">Image
+                    source</a> <br><br>
+                As you can see, clicking the link will bring you to the website defined in the "href" attribute. You can
+                change this to any site you want. In fact, it doesn't even have to point to a webpage. It can also link
+                to
+                other url schemes:
+            </p>
+            <ul>
+                <li>
+                    <p>"javascript:" will run javascript code. This is generally bad practice. <a
+                            href="javascript:alert('Javascript link example!')">Example</a></p>
+                </li>
+                <li>
+                    <p>"tel:" will call a number. <a href="tel:+1 206 555 0100">Example</a></p>
+                </li>
+                <li>
+                    <p>"mailto:" will send an email. <a href="mailto:martin.thomas@student.ateneo.edu">Example</a></p>
+                </li>
+                <li>
+                    <p>"sms:" will send a text message. <a href="sms:+1 206 555 0100">Example</a></p>
+                </li>
+            </ul>
+            <p>
+                Links may also be used to skip to other parts in the same page. You can see this in the table of
+                contents at the top of this page. For example, <a href="#links">this link</a> will bring you to the top
+                of this section.
+            </p>
+            <p>
+
+                There are many other link attributes not covered here. You can <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank"> read more
+                    about them
+                    online.</a>
+            </p>
+
+
+
         </div>
-        
-    </body>
-    
-    </html>
+        <h1 style=" font-size: 8vw;" id="multimedia">Multimedia</h1>
+
+        <div>
+            <h2 style=" font-size: 6vw;" id="images">Images</h2>
+        </div>
+        <div>
+            <h2 style=" font-size: 6vw;" id="audio">Audio</h2>
+        </div>
+        <div>
+            <h2 style=" font-size: 6vw;" id="video">Video</h2>
+            <div>
+                <h3 style="font-size: 4vw;" id="yt">Adding Youtube Videos</h3>
+            </div>
+        </div>
+        <div>
+            <h2 style=" font-size: 6vw;" id="AT">Animated Text</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
