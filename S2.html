@@ -11,17 +11,17 @@
 </head>
 
 <body style="margin: 0%;">
-    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;" >
+    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;">
 
         <!-- <img src="./assets/earth.jpg"
             style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;"> -->
         <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
-                <td><a href="./index.html">Homepage</a></td>
-                <td><a href="./about_us.html">About Us</a></td>
-                <td><a href="./S1.html">Page 1</a></td>
-                <td><a href="./S2.html">Page 2</a></td>
+                <td><a href="./index.html" style="color:crimson;"><b>Homepage</b></a></td>
+                <td><a href="./about_us.html" style="color:crimson;"><b>About Us </b></a></td>
+                <td><a href="./S1.html" style="color:crimson;"><b>AP</b></a></td>
+                <td><a href="./S2.html" style="color:crimson;"><b>Computer </b></a></td>
 
                 <p class="right" id="headOwn">
                     by Enzo and Martin
@@ -36,19 +36,24 @@
 
 
     </header>
-    
-    <div id="pageHead" style="background-image: url(./assets/computerHeading.jpg);background-size: cover; ">
+
+    <div id="pageHead" style="background-image: url(./assets/computerHeading.jpg);background-size: cover;">
         <hr>
-        <h2 style="text-align: center; font-size: 4vw; color: white;">HTML</h2>
-        <h1 style="text-align: center;font-size: 6vw; color: white; background-color: black;">How to Add Links and
-            Multimedia</h1>
+        
+        <h1 style="text-align: center;font-size: 4vw; color: white; background-color: black;margin-top: 10vw;margin-bottom: 10vw;">How to Add Links and
+            Multimedia to HTML</h1>
         <hr>
     </div>
     <script>
-    console.log("Size of header:" + document.querySelector("header").offsetHeight)
-        document.getElementById("pageHead").style.marginTop=document.querySelector("header").offsetHeight-1 + "px";
+        console.log("Size of header:" + document.querySelector("header").offsetHeight)
+        document.getElementById("pageHead").style.marginTop = document.querySelector("header").offsetHeight - 1 + "px";
     </script>
-    <div style="float: right; margin-right: 5vw; margin-top: 10vw; padding: 1vw; box-shadow: 1px 2px 3px black;border: 0.1vw solid black;border-radius: 1vw;">
+    <noscript>
+        <h1>Please enable Javascript</h1>
+
+    </noscript>
+    <div
+        style="float: right; margin-right: 5vw; margin-top: 10vw; padding: 1vw; box-shadow: 2px 3px 3px black;border: 0.2vw solid black;border-radius: 1vw;background-color: beige;">
         <div>
             <h1>
                 Table of Contents
@@ -72,19 +77,16 @@
 
             </ol>
         </div>
-        <div>
-            <p>Written by Martin Thomas of 8-Corby</p>
-            <p>Feb 1, 2025</p>
-        </div>
+
     </div>
-    <div style="margin-left: 5vw; margin-right: 20vw;">
-        <h1 style=" font-size: 8vw;" id="links">Links</h1>
+    <div style="margin-left: 10vw; margin-right: 30vw;">
+        <h1 id="links" style="font-size: 5vw;">Links</h1>
         <div>
             <p>
                 The &lta&gt tag create a link. For example,
             </p>
             <br>
-            <pre>&lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt</pre>
+            <pre class="code">&lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt</pre>
             <br>
             <p>
                 will create a link like this: <br>
@@ -95,7 +97,7 @@
                 If would like it to open in the same tab, you could change the "target" attribute to "_self":
             </p>
             <br>
-            <pre>&lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt</pre>
+            <pre class="code">&lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt</pre>
             <br>
             <p>
                 The output would then be:
@@ -108,7 +110,7 @@
                 the
                 link in the topmost browsing context in the case of nested iframes.
             </p>
-            <img style="width:60vw; " src="./assets/links.png"
+            <img style="width:60vw; border: 0.2vw solid black; " src="./assets/links.png"
                 alt="An image differenciating the different possible values for the target attribute of links">
             <p>
                 <a
@@ -150,15 +152,15 @@
 
 
         </div>
-        <h1 style=" font-size: 8vw;" id="multimedia">Multimedia</h1>
+        <h1 style=" font-size: 5vw;" id="multimedia">Multimedia</h1>
 
         <div>
-            <h2 style=" font-size: 6vw;" id="images">Images</h2>
+            <h2 style=" font-size: 4vw;" id="images">Images</h2>
             <p>Images can be displayed using the &ltimg&gt tag. You can specify the path to the image in the "src"
                 attribute. For example:</p>
             <br>
             <br>
-            <pre>&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt</pre>
+            <p class="code">&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt</p>
             <p>
                 will render as:
                 <br>
@@ -177,7 +179,7 @@
                 You can use images as links by nesting them inside an anchor tag:
                 <br><br>
             </p>
-            <pre>&lta href = "https://www.example.com" target = "_blank"&gt 
+            <pre class="code">&lta href = "https://www.example.com" target = "_blank"&gt 
     &ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt
 &lt/a&gt</pre>
 
@@ -186,8 +188,7 @@
             </a>
             <br>
             <p>
-                <a
-                    href="https://www.pexels.com/photo/ocean-sunset-596935/">
+                <a href="https://www.pexels.com/photo/ocean-sunset-596935/">
                     Image source
                 </a>
                 <br><br>
@@ -205,19 +206,45 @@
 
         </div>
         <div>
-            <h2 style=" font-size: 6vw;" id="audio">Audio</h2>
+            <h2 style=" font-size: 4vw;" id="audio">Audio</h2>
+            <p>Note: Example music used throughout this section is from <a href="https://www.no-copyright-music.com/cinematic/">https://www.no-copyright-music.com/cinematic/</a>
+            </p>
             <div>
-                <p>You can </p>
+                <p>You can use the &ltaudio&gt tag to add sound to your webpage. You link to the sound file using the
+                    "source" tag like this:</p>
+                <pre class="code">
+&ltaudio controls&gt
+    &ltsource src = "./assets/music_example.mp3"&gt
+&lt/audio&gt</pre>
+                <audio controls>
+                    <source src="./assets/music_example.mp3">
+                </audio>
+                <p> Music that autoplays when the page is loaded is usually blocked by the browser. However, audio can
+                    be played upon user interaction through Javascript </p>
+                <audio id="JSAutoplay">
+                    <source src="./assets/music_example.mp3">
+                </audio>
+                <div id="autoplayActivator"
+                    style="width: 20vw; height: 20vw; background-color: beige;box-shadow: 2px 3px 3px black; text-align: center;">
+                    <p style="padding-top: 40%;">
+                        Click anywhere within this box to play music via Javascript
+                    </p>
+                </div>
+                <script>
+                    document.getElementById("autoplayActivator").addEventListener("click", () => {
+                        document.getElementById("JSAutoplay").play()
+                    })
+                </script>
             </div>
         </div>
         <div>
-            <h2 style=" font-size: 6vw;" id="video">Video</h2>
+            <h2 style=" font-size: 4vw;" id="video">Video</h2>
             <div>
-                <h3 style="font-size: 4vw;" id="yt">Adding Youtube Videos</h3>
+                <h3 style="font-size: 3vw;" id="yt">Adding Youtube Videos</h3>
             </div>
         </div>
         <div>
-            <h2 style=" font-size: 6vw;" id="AT">Animated Text</h2>
+            <h2 style=" font-size: 4vw;" id="AT">Animated Text</h2>
         </div>
     </div>
 
