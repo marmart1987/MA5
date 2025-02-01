@@ -10,12 +10,12 @@
     </style>
 </head>
 
-<body>
-    <header style="background-color: bisque;">
+<body style="margin: 0%;">
+    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;" >
 
-        <img src="./media/earth.jpg"
-            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
-        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 7vw;">OUR SITE</h1>
+        <!-- <img src="./assets/earth.jpg"
+            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;"> -->
+        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
                 <td><a href="./index.html">Homepage</a></td>
@@ -23,7 +23,7 @@
                 <td><a href="./S1.html">Page 1</a></td>
                 <td><a href="./S2.html">Page 2</a></td>
 
-                <p class="right" style="padding-left: 3vw; font-size: 1.7vw;">
+                <p class="right" id="headOwn">
                     by Enzo and Martin
                     <br>
                     8-Corby 2024-2025
@@ -32,18 +32,23 @@
 
         </table>
         <br>
-        <hr style="border: 1px solid black">
+        <hr style="border: 1px solid black;margin-bottom: 0;">
 
 
     </header>
-    <div style="background-image: url(./media/computerHeading.jpg);background-size: cover;">
+    
+    <div id="pageHead" style="background-image: url(./assets/computerHeading.jpg);background-size: cover; ">
         <hr>
         <h2 style="text-align: center; font-size: 4vw; color: white;">HTML</h2>
-        <h1 style="text-align: center;font-size: 8vw; color: white; background-color: black;">How to Add Links and
+        <h1 style="text-align: center;font-size: 6vw; color: white; background-color: black;">How to Add Links and
             Multimedia</h1>
         <hr>
     </div>
-    <div style="float: right; margin-right: 5vw; margin-top: 10vw;">
+    <script>
+    console.log("Size of header:" + document.querySelector("header").offsetHeight)
+        document.getElementById("pageHead").style.marginTop=document.querySelector("header").offsetHeight-1 + "px";
+    </script>
+    <div style="float: right; margin-right: 5vw; margin-top: 10vw; padding: 1vw; box-shadow: 1px 2px 3px black;border: 0.1vw solid black;border-radius: 1vw;">
         <div>
             <h1>
                 Table of Contents
@@ -103,7 +108,7 @@
                 the
                 link in the topmost browsing context in the case of nested iframes.
             </p>
-            <img style="width:60vw; " src="./media/links.png"
+            <img style="width:60vw; " src="./assets/links.png"
                 alt="An image differenciating the different possible values for the target attribute of links">
             <p>
                 <a
@@ -149,9 +154,61 @@
 
         <div>
             <h2 style=" font-size: 6vw;" id="images">Images</h2>
+            <p>Images can be displayed using the &ltimg&gt tag. You can specify the path to the image in the "src"
+                attribute. For example:</p>
+            <br>
+            <br>
+            <pre>&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt</pre>
+            <p>
+                will render as:
+                <br>
+            </p>
+
+            <img src="assets/htmlLogo.png" alt="Example image" width="500vw">
+            <p>
+                <a href="https://codybonney.com/style-html-elements-based-on-locale-using-css/">
+                    Image source
+                </a>
+                <br><br>
+                You are <b>very highly recommended</b> to use the "alt" tag. This tag is used by screen readers for
+                accesibility. It will also appear if your image fails to load.
+                You can specify the width and height of the image using the "width" and "height" attributes. <br>
+
+                You can use images as links by nesting them inside an anchor tag:
+                <br><br>
+            </p>
+            <pre>&lta href = "https://www.example.com" target = "_blank"&gt 
+    &ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt
+&lt/a&gt</pre>
+
+            <a href="https://www.example.com" target="_blank">
+                <img src="/assets/ocean.jpg" alt="Example image" width="500vw">
+            </a>
+            <br>
+            <p>
+                <a
+                    href="https://www.pexels.com/photo/ocean-sunset-596935/">
+                    Image source
+                </a>
+                <br><br>
+                You can use any of the following image types in html:
+            <ul>
+                <li>APNG</li>
+                <li>AVIF</li>
+                <li>GIF</li>
+                <li>JPEG</li>
+                <li>PNG</li>
+                <li>SVG</li>
+                <li>WebP</li>
+            </ul>
+            </p>
+
         </div>
         <div>
             <h2 style=" font-size: 6vw;" id="audio">Audio</h2>
+            <div>
+                <p>You can </p>
+            </div>
         </div>
         <div>
             <h2 style=" font-size: 6vw;" id="video">Video</h2>
