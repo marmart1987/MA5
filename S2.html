@@ -39,8 +39,10 @@
 
     <div id="pageHead" style="background-image: url(./assets/computerHeading.jpg);background-size: cover;">
         <hr>
-        
-        <h1 style="text-align: center;font-size: 4vw; color: white; background-color: black;margin-top: 10vw;margin-bottom: 10vw;">How to Add Links and
+
+        <h1
+            style="text-align: center;font-size: 4vw; color: white; background-color: black;margin-top: 10vw;margin-bottom: 10vw;">
+            How to Add Links and
             Multimedia to HTML</h1>
         <hr>
     </div>
@@ -116,6 +118,29 @@
                 <a
                     href="https://stackoverflow.com/questions/18470097/difference-between-self-top-and-parent-in-the-anchor-tag-target-attribute">Image
                     source</a> <br><br>
+                    Here's a table with the different values for the target attribute:
+                    <table style="border: 0.3vw solid black; border-collapse: collapse;">
+                        <th>
+                            <td>Target</td>
+                            <td>Opens in...</td>
+                        </th>
+                        <tr>
+                            <td style="border: 0.3vw solid black;">_self</td>
+                            <td style="border: 0.3vw solid black;">Same tab</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 0.3vw solid black;">_blank</td>
+                            <td style="border: 0.3vw solid black;">New tab</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 0.3vw solid black;">_parent</td>
+                            <td style="border: 0.3vw solid black;">Upper context</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 0.3vw solid black;">_top</td>
+                            <td style="border: 0.3vw solid black;">Topmost context</td>
+                        </tr>
+                    </table>
                 As you can see, clicking the link will bring you to the website defined in the "href" attribute. You can
                 change this to any site you want. In fact, it doesn't even have to point to a webpage. It can also link
                 to
@@ -207,7 +232,10 @@
         </div>
         <div>
             <h2 style=" font-size: 4vw;" id="audio">Audio</h2>
-            <p>Note: Example music used throughout this section is from <a href="https://www.no-copyright-music.com/cinematic/">https://www.no-copyright-music.com/cinematic/</a>
+            <p>Note: Example music used throughout this section is from <a
+                    href="https://www.no-copyright-music.com/cinematic/">https://www.no-copyright-music.com/cinematic/</a>.
+                The pop sound effect is from <a
+                    href="https://mixkit.co/free-sound-effects/pop/">https://mixkit.co/free-sound-effects/pop/</a>
             </p>
             <div>
                 <p>You can use the &ltaudio&gt tag to add sound to your webpage. You link to the sound file using the
@@ -219,8 +247,19 @@
                 <audio controls>
                     <source src="./assets/music_example.mp3">
                 </audio>
+                <p> You can use the "loop" attribute to make your sound automatically repeat. You can also use the muted
+                    attribute to have it start with no volume.</p>
+                <p>An example with loop enabled</p>
+                <audio controls loop>
+                    <source src="./assets/pop.wav">
+                </audio>
+
+                <p>An example with muted enabled</p>
+                <audio controls muted>
+                    <source src="./assets/music_example.mp3">
+                </audio>
                 <p> Music that autoplays when the page is loaded is usually blocked by the browser. However, audio can
-                    be played upon user interaction through Javascript </p>
+                    be played upon user interaction through Javascript.</p>
                 <audio id="JSAutoplay">
                     <source src="./assets/music_example.mp3">
                 </audio>
@@ -239,8 +278,29 @@
         </div>
         <div>
             <h2 style=" font-size: 4vw;" id="video">Video</h2>
+            <p>You may embed video into your HTML site using the &ltvideo&gt tag.</p>
+            <pre class="code">
+&ltvideo controls width="500vw"&gt
+    &ltsource src = "assets/oceanVideo.mp4"&gt
+&lt/video&gt
+            </pre>
+            <video controls width="500vw">
+                <source src="assets/oceanVideo.mp4">
+            </video>
+            <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", and "height"
+                attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
+                attribute. Autoplay with sound is not allowed in most browsers.</p>
+            <pre class="code">
+&ltvideo controls muted autoplay width="500vw"&gt
+    &ltsource src = "assets/oceanVideo.mp4"&gt
+&lt/video&gt
+                                </pre>
+            <video controls muted autoplay width="500vw">
+                <source src="assets/oceanVideo.mp4">
+            </video>
             <div>
                 <h3 style="font-size: 3vw;" id="yt">Adding Youtube Videos</h3>
+
             </div>
         </div>
         <div>
