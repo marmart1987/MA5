@@ -60,15 +60,16 @@
             </h1>
             <ol type="i">
                 <li><a href="#links">Links</a></li>
-                <li><a href="#multimedia">Multimedia
-
+                <li><a href="#multimedia">Multimedia</a>
                         <ol type="a">
                             <li> <a href="#images">Images</a></li>
                             <li> <a href="#audio">Audio</a></li>
                             <li> <a href="#video">Video</a></li>
-                            <li> <a href="#AT">Animated Text</a></li>
                         </ol>
-                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#ref">References</a>
                 </li>
 
             </ol>
@@ -112,31 +113,31 @@
                 <a
                     href="https://stackoverflow.com/questions/18470097/difference-between-self-top-and-parent-in-the-anchor-tag-target-attribute">Image
                     source</a> <br><br>
-                    Here's a table with the different values for the target attribute:
-                    </p>
-                    <table style="border: 0.3vw solid black; border-collapse: collapse;box-shadow: 2px 3px 5px red;">
-                        <tr>
-                            <th style="border: 0.3vw solid black;">Target</th>
-                            <th style="border: 0.3vw solid black;">Opens in...</th>
-                        </tr>
-                        <tr>
-                            <td style="border: 0.3vw solid black;">_self</td>
-                            <td style="border: 0.3vw solid black;">Same tab</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 0.3vw solid black;">_blank</td>
-                            <td style="border: 0.3vw solid black;">New tab</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 0.3vw solid black;">_parent</td>
-                            <td style="border: 0.3vw solid black;">Upper context</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 0.3vw solid black;">_top</td>
-                            <td style="border: 0.3vw solid black;">Topmost context</td>
-                        </tr>
-                    </table>
-                    <p>
+                Here's a table with the different values for the target attribute:
+            </p>
+            <table style="border: 0.3vw solid black; border-collapse: collapse;box-shadow: 2px 3px 5px red;">
+                <tr>
+                    <th style="border: 0.3vw solid black;">Target</th>
+                    <th style="border: 0.3vw solid black;">Opens in...</th>
+                </tr>
+                <tr>
+                    <td style="border: 0.3vw solid black;">_self</td>
+                    <td style="border: 0.3vw solid black;">Same tab</td>
+                </tr>
+                <tr>
+                    <td style="border: 0.3vw solid black;">_blank</td>
+                    <td style="border: 0.3vw solid black;">New tab</td>
+                </tr>
+                <tr>
+                    <td style="border: 0.3vw solid black;">_parent</td>
+                    <td style="border: 0.3vw solid black;">Upper context</td>
+                </tr>
+                <tr>
+                    <td style="border: 0.3vw solid black;">_top</td>
+                    <td style="border: 0.3vw solid black;">Topmost context</td>
+                </tr>
+            </table>
+            <p>
                 As you can see, clicking the link will bring you to the website defined in the "href" attribute. You can
                 change this to any site you want. In fact, it doesn't even have to point to a webpage. It can also link
                 to
@@ -201,7 +202,7 @@
                 <br><br>
             </p>
             <pre class="code">&lta href = "https://www.example.com" target = "_blank"&gt 
-    &ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt
+    &ltimg src = "/assets/ocean.jpg" alt = "Example image" width = "500vw"&gt
 &lt/a&gt</pre>
 
             <a href="https://www.example.com" target="_blank">
@@ -266,38 +267,74 @@
                     </p>
                 </div>
                 <script>
-                    document.getElementById("autoplayActivator").addEventListener("click", () => {
-                        document.getElementById("JSAutoplay").play()
+                    let activator = document.getElementById("autoplayActivator")
+                    activator.addEventListener("click", () => {
+                        let sound = document.getElementById("JSAutoplay")
+                        if (sound.paused) {
+                            sound.play()
+                            activator.querySelector("p").innerHTML = "Click anywhere within this box to pause the music via Javascript"
+                        } else {
+                            sound.pause()
+                            activator.querySelector("p").innerHTML = "Click anywhere within this box to play music via Javascript"
+                        }
                     })
                 </script>
             </div>
         </div>
         <div>
             <h2 style=" font-size: 4vw;" id="video">Video</h2>
-            <p>You may embed video into your HTML site using the &ltvideo&gt tag.</p>
-            <pre class="code">
+            <div>
+                <p>You may embed video into your HTML site using the &ltvideo&gt tag.</p>
+                <pre class="code">
 &ltvideo controls width="500vw"&gt
     &ltsource src = "assets/oceanVideo.mp4"&gt
 &lt/video&gt
             </pre>
-            <video controls width="500vw">
-                <source src="assets/oceanVideo.mp4">
-            </video>
-            <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", "loop", and "height"
-                attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
-                attribute. Autoplay with sound is not allowed in most browsers.</p>
-            <pre class="code">
+                <video controls width="500vw">
+                    <source src="assets/oceanVideo.mp4">
+                </video>
+                <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", "loop",
+                    and "height"
+                    attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
+                    attribute. Autoplay with sound is not allowed in most browsers.</p>
+                <pre class="code">
 &ltvideo controls muted autoplay loop width="500vw"&gt
     &ltsource src = "assets/oceanVideo.mp4"&gt
 &lt/video&gt
                                 </pre>
-            <video controls muted autoplay loop width="500vw">
-                <source src="assets/oceanVideo.mp4">
-            </video>
+                <video controls muted autoplay loop width="500vw">
+                    <source src="assets/oceanVideo.mp4">
+                </video>
+            </div>
+
         </div>
         <div>
-            <h2 style=" font-size: 4vw;" id="AT">Animated Text</h2>
+            <h2 style=" font-size: 4vw;" id="ref">References</h2>
+            <div>
+                <p class="indent">
+                    <i>&ltimg&gt: The Image Embed element - HTML: HyperText Markup Language | MDN</i>. (2024, December
+                    19). MDN
+                    Web Docs. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+                </p>
+                <p class="indent">
+                    <i>&ltaudio&gt: The Embed Audio element - HTML: HyperText Markup Language | MDN</i>. (2024, December
+                    19).
+                    MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+                </p>
+
+                <p class="indent">
+                    <i>&lta&gt: The Anchor element - HTML: HyperText Markup Language | MDN</i>. (2024, December 19). MDN
+                    Web
+                    Docs. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+                </p>
+                <p class="indent">
+                    <i> &ltvideo&gt: The Video Embed element - HTML: HyperText Markup Language | MDN</i>. (2024,
+                    December 19). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+                </p>
+
+            </div>
         </div>
+
     </div>
 
 </body>
