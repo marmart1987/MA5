@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
     <link href="style.css" rel="stylesheet">
     <style>
     </style>
@@ -12,20 +12,18 @@
 
 <body>
 
-    
-    <header style="background-color:azure;">
 
-        <img src="./assets/earth.jpg"
-            style="display:inline-block;height: 9vw;padding-top: 1vw;padding-left: 1vw;padding-right: 2vw;">
-        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 7vw;">OUR SITE</h1>
+    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0; z-index: 1;">
+
+        <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
-                <td><a href="./index.html">Homepage</a></td>
-                <td><a href="./about_us.html">About Us</a></td>
-                <td><a href="./S1.html">Page 1</a></td>
-                <td><a href="./S2.html">Page 2</a></td>
+                <td><a href="./index.html" style="color:crimson;"><b>Homepage</b></a></td>
+                <td><a href="./about_us.html" style="color:crimson;"><b>About Us </b></a></td>
+                <td><a href="./ap.html" style="color:crimson;"><b>AP</b></a></td>
+                <td><a href="./computer.html" style="color:crimson;"><b>Computer </b></a></td>
 
-                <p class="right" style="padding-left: 3vw; font-size: 1.7vw;">
+                <p class="right" id="headOwn">
                     by Enzo and Martin
                     <br>
                     8-Corby 2024-2025
@@ -34,22 +32,29 @@
 
         </table>
         <br>
-        <hr style="border: 1px solid black">
+        <hr style="border: 1px solid black;margin-bottom: 0;">
 
 
     </header>
-    <div style="background-image: url(./assets/homepageHeading.jpg);background-size: cover;">
+    <div id="pageHead" style="background-image: url(./assets/homepageHeading.jpg);background-size: cover;">
         <hr>
         <h1 style="text-align: center;font-size: 8vw; ">Homepage</h1>
         <hr>
     </div>
-    <div style="background-color: antiquewhite; margin-left: 4vw;margin-right: 4vw; border-radius: 1vw 1vw 1vw 1vw;" >
-    <h1 style="margin-top: 5vw;font-size: 5vw; margin-left: 3vw;">Welcome to our site!</h1>
-    <br>
-    <br>
-    <br>
-</div>
-    
+    <script>
+        console.log("Size of header:" + document.querySelector("header").offsetHeight)
+        document.getElementById("pageHead").style.marginTop = document.querySelector("header").offsetHeight - 1 + "px";
+    </script>
+    <noscript>
+        <h1>Please enable Javascript</h1>
+    </noscript>
+    <div style="background-color: antiquewhite; margin-left: 4vw;margin-right: 4vw; border-radius: 1vw 1vw 1vw 1vw;">
+        <h1 style="margin-top: 5vw;font-size: 5vw; margin-left: 3vw;">Welcome to our site!</h1>
+        <br>
+        <br>
+        <br>
+    </div>
+
 </body>
 
 </html>

@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Computer</title>
     <link href="style.css" rel="stylesheet">
     <style>
     </style>
 </head>
 
 <body style="margin: 0%;">
-    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0;">
+    <header style="background-color:lavender;  width: 100%;position: fixed; top:0;left:0; z-index: 1;">
 
         <h1 style="display: inline-block; margin-top: 0px; margin-bottom: 0px; font-size: 5vw;">OUR SITE</h1>
         <table class="center" style="display: inline;">
             <tr>
                 <td><a href="./index.html" style="color:crimson;"><b>Homepage</b></a></td>
                 <td><a href="./about_us.html" style="color:crimson;"><b>About Us </b></a></td>
-                <td><a href="./S1.html" style="color:crimson;"><b>AP</b></a></td>
-                <td><a href="./S2.html" style="color:crimson;"><b>Computer </b></a></td>
+                <td><a href="./ap.html" style="color:crimson;"><b>AP</b></a></td>
+                <td><a href="./computer.html" style="color:crimson;"><b>Computer </b></a></td>
 
                 <p class="right" id="headOwn">
                     by Enzo and Martin
@@ -40,8 +40,14 @@
 
         <h1
             style="text-align: center;font-size: 4vw; color: white; background-color: black;margin-top: 10vw;margin-bottom: 10vw;">
-            How to Add Links and
-            Multimedia to HTML</h1>
+            How to Add Links and Multimedia to HTML
+        </h1>
+        <h2
+            style="font-size: 2vw; color: white; background-color: black; margin-top: -8vw; text-align: right;  float: right;">
+            Martin Thomas <br>
+            02/02/2025
+        </h2>
+
         <hr>
     </div>
     <script>
@@ -50,10 +56,8 @@
     </script>
     <noscript>
         <h1>Please enable Javascript</h1>
-
     </noscript>
-    <div
-        style="float: right; margin-right: 5vw; margin-top: 10vw; padding: 1vw; box-shadow: 2px 3px 3px black;border: 0.2vw solid black;border-radius: 1vw;background-color: beige;">
+    <div id="toc">
         <div>
             <h1>
                 Table of Contents
@@ -61,12 +65,12 @@
             <ol type="i">
                 <li><a href="#links">Links</a></li>
                 <li><a href="#multimedia">Multimedia</a>
-                        <ol type="a">
-                            <li> <a href="#images">Images</a></li>
-                            <li> <a href="#audio">Audio</a></li>
-                            <li> <a href="#video">Video</a></li>
-                        </ol>
-                    
+                    <ol type="a">
+                        <li> <a href="#images">Images</a></li>
+                        <li> <a href="#audio">Audio</a></li>
+                        <li> <a href="#video">Video</a></li>
+                    </ol>
+
                 </li>
                 <li>
                     <a href="#ref">References</a>
@@ -76,14 +80,15 @@
         </div>
 
     </div>
-    <div style="margin-left: 10vw; margin-right: 30vw;">
+
+    <div style="margin-left: 10vw; margin-right: 20vw;">
         <h1 id="links" style="font-size: 5vw;">Links</h1>
         <div>
             <p>
                 The &lta&gt tag create a link. For example,
             </p>
             <br>
-            <pre class="code">&lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt</pre>
+            <p class="code">&lta href = "https://www.example.com" target = "_blank"&gt Click me! &lt/a&gt</p>
             <br>
             <p>
                 will create a link like this: <br>
@@ -94,7 +99,7 @@
                 If would like it to open in the same tab, you could change the "target" attribute to "_self":
             </p>
             <br>
-            <pre class="code">&lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt</pre>
+            <p class="code">&lta href = "https://www.example.com" target = "_self"&gt Click me! &lt/a&gt</p>
             <br>
             <p>
                 The output would then be:
@@ -182,13 +187,13 @@
                 attribute. For example:</p>
             <br>
             <br>
-            <p class="code">&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "500vw"&gt</p>
+            <p class="code">&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "400vw"&gt</p>
             <p>
                 will render as:
                 <br>
             </p>
 
-            <img src="assets/htmlLogo.png" alt="Example image" width="500vw">
+            <img src="assets/htmlLogo.png" alt="Example image" width="400vw">
             <p>
                 <a href="https://codybonney.com/style-html-elements-based-on-locale-using-css/">
                     Image source
@@ -201,12 +206,12 @@
                 You can use images as links by nesting them inside an anchor tag:
                 <br><br>
             </p>
-            <pre class="code">&lta href = "https://www.example.com" target = "_blank"&gt 
-    &ltimg src = "/assets/ocean.jpg" alt = "Example image" width = "500vw"&gt
-&lt/a&gt</pre>
+            <p class="code">&lta href = "https://www.example.com" target = "_blank"&gt <br>
+                &nbsp;&nbsp;&nbsp; &ltimg src = "/assets/ocean.jpg" alt = "Example image" width = "400vw"&gt <br>
+                &lt/a&gt</p>
 
             <a href="https://www.example.com" target="_blank">
-                <img src="/assets/ocean.jpg" alt="Example image" width="500vw">
+                <img src="/assets/ocean.jpg" alt="Example image" width="400vw">
             </a>
             <br>
             <p>
@@ -237,10 +242,10 @@
             <div>
                 <p>You can use the &ltaudio&gt tag to add sound to your webpage. You link to the sound file using the
                     "source" tag like this:</p>
-                <pre class="code">
-&ltaudio controls&gt
-    &ltsource src = "./assets/music_example.mp3"&gt
-&lt/audio&gt</pre>
+                <p class="code">
+                    &ltaudio controls&gt <br>
+                    &nbsp;&nbsp;&nbsp;&ltsource src = "./assets/music_example.mp3"&gt<br>
+                    &lt/audio&gt<br></p>
                 <audio controls>
                     <source src="./assets/music_example.mp3">
                 </audio>
@@ -285,11 +290,11 @@
             <h2 style=" font-size: 4vw;" id="video">Video</h2>
             <div>
                 <p>You may embed video into your HTML site using the &ltvideo&gt tag.</p>
-                <pre class="code">
-&ltvideo controls width="500vw"&gt
-    &ltsource src = "assets/oceanVideo.mp4"&gt
-&lt/video&gt
-            </pre>
+                <p class="code">
+                    &ltvideo controls width="500vw"&gt <br>
+                    &nbsp;&nbsp;&nbsp;&ltsource src = "assets/oceanVideo.mp4"&gt<br>
+                    &lt/video&gt
+                </p>
                 <video controls width="500vw">
                     <source src="assets/oceanVideo.mp4">
                 </video>
@@ -297,11 +302,11 @@
                     and "height"
                     attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
                     attribute. Autoplay with sound is not allowed in most browsers.</p>
-                <pre class="code">
-&ltvideo controls muted autoplay loop width="500vw"&gt
-    &ltsource src = "assets/oceanVideo.mp4"&gt
-&lt/video&gt
-                                </pre>
+                <p class="code">
+                    &ltvideo controls muted autoplay loop width="500vw"&gt<br>
+                    &nbsp;&nbsp;&nbsp;&ltsource src = "assets/oceanVideo.mp4"&gt<br>
+                    &lt/video&gt
+                </p>
                 <video controls muted autoplay loop width="500vw">
                     <source src="assets/oceanVideo.mp4">
                 </video>
@@ -336,7 +341,29 @@
         </div>
 
     </div>
-
+    <footer style="background-color: lavender;">
+        <hr>
+        <div style="margin-left: 10vw;">
+            <div style="display: inline-block;">
+                <p>Contact Us: <br>
+                <ul>
+                    <li>Enzo Pacheco: <a>Email</a></li>
+                    <li>Martin thomas: <a href="mailto:martin.thomas@student.ateneo.edu"> Email</a></li>
+                </ul>
+            </div>
+            <table style=" display: inline-block; margin-left: 40vw;">
+                <tr>
+                    <td><a href="index.html"> Homepage</a></td>
+                    <td> <a href="about_us.html">About Us</a></td>
+                </tr>
+                <tr>
+                    <td><a href="ap.html"> AP</a></td>
+                    <td> <a href="index.html">Computer</a></td>
+                </tr>
+            </table>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
