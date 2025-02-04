@@ -187,13 +187,13 @@
                 attribute. For example:</p>
             <br>
             <br>
-            <p class="code">&ltimg src = "/assets/htmlLogo.png" alt = "Example image" width = "400vw"&gt</p>
+            <p class="code">&ltimg src = "/assets/htmlLogo.png" alt = "Example image" style = "width:500;"&gt</p>
             <p>
                 will render as:
                 <br>
             </p>
 
-            <img src="assets/htmlLogo.png" alt="Example image" width="400vw">
+            <img src="assets/htmlLogo.png" alt="Example image" style="width: 50vw;">
             <p>
                 <a href="https://codybonney.com/style-html-elements-based-on-locale-using-css/">
                     Image source
@@ -207,11 +207,11 @@
                 <br><br>
             </p>
             <p class="code">&lta href = "https://www.example.com" target = "_blank"&gt <br>
-                &nbsp;&nbsp;&nbsp; &ltimg src = "/assets/ocean.jpg" alt = "Example image" width = "400vw"&gt <br>
+                &nbsp;&nbsp;&nbsp; &ltimg src = "/assets/ocean.jpg" alt = "Example image" style="width: 500;&gt <br>
                 &lt/a&gt</p>
 
             <a href="https://www.example.com" target="_blank">
-                <img src="/assets/ocean.jpg" alt="Example image" width="400vw">
+                <img src="/assets/ocean.jpg" alt="Example image" style="width: 50vw;">
             </a>
             <br>
             <p>
@@ -291,11 +291,11 @@
             <div>
                 <p>You may embed video into your HTML site using the &ltvideo&gt tag.</p>
                 <p class="code">
-                    &ltvideo controls width="500vw"&gt <br>
+                    &ltvideo controls width="500"&gt <br>
                     &nbsp;&nbsp;&nbsp;&ltsource src = "assets/oceanVideo.mp4"&gt<br>
                     &lt/video&gt
                 </p>
-                <video controls width="500vw">
+                <video controls width="500">
                     <source src="assets/oceanVideo.mp4">
                 </video>
                 <p>You can see that, similar to the audio tag, the video tag also uses the "controls", "width", "loop",
@@ -303,11 +303,11 @@
                     attributes and the "source" tag. For videos, autoplay is allowed as long as you specify the "muted"
                     attribute. Autoplay with sound is not allowed in most browsers.</p>
                 <p class="code">
-                    &ltvideo controls muted autoplay loop width="500vw"&gt<br>
+                    &ltvideo controls muted autoplay loop width="500"&gt<br>
                     &nbsp;&nbsp;&nbsp;&ltsource src = "assets/oceanVideo.mp4"&gt<br>
                     &lt/video&gt
                 </p>
-                <video controls muted autoplay loop width="500vw">
+                <video controls muted autoplay loop width="500">
                     <source src="assets/oceanVideo.mp4">
                 </video>
             </div>
